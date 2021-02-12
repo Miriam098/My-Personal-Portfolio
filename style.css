@@ -21,7 +21,10 @@ a {
 li {
   list-style: none;
 }
-
+/*========================================================================
+                                                        NAVBAR
+                      ==========================================================================
+                      */
 #navbar {
   display: flex;
   justify-content: space-around;
@@ -42,6 +45,11 @@ li {
   align-items: center;
   width: 50%;
 }
+
+/*========================================================================
+                                                                    WELCOME MESSAGE
+                                  ==========================================================================
+                                  */
 
 #welcome-section {
   height: 100vh;
@@ -64,13 +72,12 @@ li {
   border-right: solid 3px rgba(0, 255, 0, 0.75);
   white-space: nowrap;
   overflow: hidden;
-  font-family: "Source Code Pro", monospace;
   font-size: 28px;
   color: black;
 }
 
 .typewriter {
-  animation: animated-text 4s steps(29, end) 1s 1 normal both,
+  animation: animated-text 4s steps(26, end) 1s 1 normal both,
     animated-cursor 600ms steps(29, end) infinite;
 }
 
@@ -81,7 +88,7 @@ li {
     width: 0;
   }
   to {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -103,7 +110,12 @@ li {
 .animate-pop-in {
   animation: pop-in 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
   opacity: 0;
-  animation-delay: 5.5s;
+  animation-delay: 6s;
+  width: 100%;
+}
+
+.portfolio-span {
+  animation-delay: 5s;
 }
 
 @keyframes pop-in {
@@ -117,7 +129,11 @@ li {
   }
 }
 
-/*ABOUT SECTION*/
+/*========================================================================
+                                                                                  ABOUT SECTION
+                                                ==========================================================================
+                                                */
+
 #about {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIALRCevgj5EHWbbVDxjXJbQ2_yvntG62-g&usqp=CAU");
   background-position: center;
@@ -149,10 +165,10 @@ li {
 }
 
 /*
-                  ========================================================================
-                                          PROJECTS SECTION
-                  ========================================================================
-*/
+                              ========================================================================
+                                                      PROJECTS SECTION
+                              ========================================================================
+            */
 
 #projects {
   display: flex;
@@ -194,7 +210,10 @@ li {
   transform: scale(1.1);
 }
 
-/*CONTACT SECTION!*/
+/*========================================================================
+                                                                                          NAVBAR
+                        ==========================================================================
+                        */
 
 .contact {
   display: flex;
@@ -205,10 +224,10 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: "Source Code Pro", monospace;
 }
 
 .contact-header {
-  /*font-family: "Montserrat", sans-serif;*/
   margin: 10rem 10rem 3rem 10rem;
   text-align: center;
 }
@@ -239,16 +258,16 @@ li {
 }
 
 .contact-form {
-  /*font-family: "Montserrat", sans-serif;*/
   padding: 20px;
   margin: 0;
   color: #fff;
   width: 100%;
+  height: 100%;
 }
 
 #form-title {
   color: #fff;
-  font-size: 0.6rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   line-height: 1px;
@@ -275,15 +294,16 @@ fieldset {
 #email,
 #subject,
 #message {
-  font-family: "Montserrat", sans-serif;
   color: white;
   outline: none;
   background: transparent;
   border: none;
   letter-spacing: 2px;
-  font-size: 0.6rem;
+  font-size: 0.8em;
   line-height: 2rem;
   padding-bottom: 0.7rem;
+  width: 100%;
+  text-align: center;
 }
 
 textarea,
@@ -291,12 +311,15 @@ textarea,
   width: 100%;
   color: #fff;
   overflow: visible;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #form-btn {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
   border: none;
   color: white;
   font-size: 0.6rem;
@@ -329,13 +352,11 @@ textarea,
 }
 
 .contact-info h3 {
-  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: #c31432;
 }
 
 .contact-info a {
-  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.8rem;
@@ -365,6 +386,21 @@ textarea,
 
 .contact-links {
   justify-content: center;
+}
+
+/*========================================================================
+                                                                        MEDIA QUERIES
+                                      ==========================================================================
+                                      */
+
+@media screen and (min-width: 1460px) {
+  .form-field {
+    width: 100%;
+  }
+
+  #form-btn {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -428,13 +464,77 @@ textarea,
   }
 }
 
-@media screen and (min-width: 1460px) {
-  .form-field {
+@media only screen and (max-width: 600px) {
+  #navbar {
+    position: unset;
+    width: 100vw;
+  }
+
+  #navbar .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  #welcome-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .project-tile {
+    width: 50%;
+  }
+
+  #projects img {
+    transition: all 1s;
+    height: auto;
     width: 100%;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    margin: 0;
+  }
+
+  .contact-header {
+    margin: 2em;
+  }
+
+  .contact #co-text {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-content {
+    height: 100%;
+    padding: 0 20px 20px;
+  }
+
+  .contact-form {
+    padding: 0;
+    height: 100%;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  textarea {
+    height: 200px;
   }
 
   #form-btn {
-    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-info {
+    height: 100vh;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -453,15 +553,29 @@ textarea,
     margin: 0;
   }
 
-  #welcome-section {
+  #welcome-section h1,
+  h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    width: 0;
+  }
+
+  .typewriter-container {
+    display: flex;
+    flex-flow: column wrap;
     width: 100%;
+    max-width: 80%;
+    justify-content: center;
+    align-items: center;
   }
 
-  #welcome-section h1 {
-    font-size: 1.6rem;
-  }
-
-  .typewriter {
+  @keyframes animated-text {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
 
   .project-tile {
@@ -516,7 +630,4 @@ textarea,
     display: flex;
     flex-direction: column;
   }
-}
-
-@media only screen and (max-width: 600px) {
 }
