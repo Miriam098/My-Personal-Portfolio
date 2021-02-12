@@ -427,6 +427,10 @@ textarea,
     font-size: 4vw;
     margin: 0;
   }
+
+  #co-text {
+    font-size: 1.5rem;
+  }
 }
 
 /* Smartphones (portrait and landscape) ---------- */
@@ -521,24 +525,6 @@ textarea,
   .contact-links {
     display: flex;
   }
-}
-
-/* Smartphones (portrait) ---------- */
-@media screen and (max-width: 320px) {
-}
-
-/* Smartphones (landscape) ---------- */
-@media screen and (min-width: 321px) and {
-}
-
-/* Tablets, iPads (portrait and landscape) ---------- */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* styles */
-}
-
-/* Tablets, iPads (portrait) ---------- */
-@media screen and (min-width: 481px) and (max-width: 641px) {
-  /* styles */
 
   .contact-content {
     height: 80%;
@@ -548,6 +534,14 @@ textarea,
 
   .contact-form {
     padding: 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  #navbar .menu {
+    position: unset;
+    width: 100vw;
+    justify-content: space-evenly;
+    text-align: center;
   }
 }
 
@@ -609,7 +603,19 @@ textarea,
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 870px) {
+  .contact-content {
+    width: 100vw;
+  }
+}
+
 @media screen and (min-width: 640px) {
+  #navbar .menu {
+    position: unset;
+    width: 100vw;
+    justify-content: space-evenly;
+  }
+
   .form-field {
     width: 100%;
   }
