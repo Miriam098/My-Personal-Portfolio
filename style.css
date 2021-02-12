@@ -22,8 +22,8 @@ li {
   list-style: none;
 }
 /*========================================================================
-                                                        NAVBAR
-                      ==========================================================================
+                                NAVBAR
+ ==========================================================================
                       */
 #navbar {
   display: flex;
@@ -47,8 +47,8 @@ li {
 }
 
 /*========================================================================
-                                                                    WELCOME MESSAGE
-                                  ==========================================================================
+                               WELCOME MESSAGE
+ ==========================================================================
                                   */
 
 #welcome-section {
@@ -129,10 +129,11 @@ li {
   }
 }
 
-/*========================================================================
-                                                                                  ABOUT SECTION
-                                                ==========================================================================
-                                                */
+/*
+========================================================================
+                              ABOUT SECTION
+========================================================================
+ */
 
 #about {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIALRCevgj5EHWbbVDxjXJbQ2_yvntG62-g&usqp=CAU");
@@ -165,9 +166,9 @@ li {
 }
 
 /*
-                              ========================================================================
-                                                      PROJECTS SECTION
-                              ========================================================================
+ =======================================================================
+                            PROJECTS SECTION
+========================================================================
             */
 
 #projects {
@@ -211,8 +212,8 @@ li {
 }
 
 /*========================================================================
-                                                                                          NAVBAR
-                        ==========================================================================
+                             CONTACT SECTION
+ =========================================================================
                         */
 
 .contact {
@@ -252,17 +253,17 @@ li {
   align-self: center;
   line-height: 2;
   height: auto;
-  width: 70%;
+  width: 80vw;
   background-color: rgba(0, 0, 0, 0.3);
   margin-bottom: 10rem;
 }
 
 .contact-form {
-  padding: 20px;
+  padding: 3em;
   margin: 0;
   color: #fff;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 #form-title {
@@ -271,8 +272,6 @@ li {
   text-transform: uppercase;
   letter-spacing: 1.2px;
   line-height: 1px;
-  margin-left: 4rem;
-  margin-bottom: 3rem;
 }
 
 fieldset {
@@ -326,7 +325,7 @@ textarea,
   letter-spacing: 2.5px;
   font-weight: 700;
   text-transform: uppercase;
-
+  width: 100%;
   height: 60px;
   background-color: #c31432;
   cursor: pointer;
@@ -346,8 +345,8 @@ textarea,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
-
+  padding: 3rem;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -360,10 +359,11 @@ textarea,
   text-decoration: none;
   color: #fff;
   font-size: 0.8rem;
-  letter-spacing: 2px;
   line-height: 3rem;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
+  margin: 0;
+  padding: 0 20px;
 }
 
 .contact-info a:hover {
@@ -377,6 +377,7 @@ textarea,
   color: #666;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .fab:hover {
@@ -385,160 +386,51 @@ textarea,
 }
 
 .contact-links {
+  display: flex;
+  flex-flow: row;
   justify-content: center;
+  align-items: center;
 }
 
 /*========================================================================
-                                                                        MEDIA QUERIES
-                                      ==========================================================================
+                            MEDIA QUERIES
+ ==========================================================================
                                       */
 
-@media screen and (min-width: 1460px) {
-  .form-field {
-    width: 100%;
-  }
-
-  #form-btn {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .contact-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .form-field {
-    width: 100%;
-  }
-
-  #form-btn {
-    width: 100%;
-  }
-
-  #form-title {
-    margin: 3rem auto;
-  }
-
-  .contact-header {
-    margin: 5rem 5rem 3rem 5rem;
-  }
-
-  #co-title {
-    font-size: 1rem;
-  }
-
-  #co-text {
-    font-size: 2.5rem;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .form-field {
-    width: 100%;
-  }
-
-  #form-title {
-    margin: 3rem auto;
-  }
-
-  #form-btn {
-    width: 100%;
-  }
-
-  .contact-header {
-    margin: 7rem 7rem 3rem 7rem;
-  }
-
-  .contact-info {
-    padding: 5rem;
-  }
-
-  #co-title {
-    font-size: 1rem;
-  }
-
-  #co-text {
-    font-size: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #navbar {
-    position: unset;
-    width: 100vw;
-  }
-
-  #navbar .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-  }
-
+/*Smart phones with extra small screens*/
+@media screen and (max-width: 280px) {
   #welcome-section h1 {
-    font-size: 1.6rem;
-  }
-
-  .project-tile {
-    width: 50%;
-  }
-
-  #projects img {
-    transition: all 1s;
-    height: auto;
-    width: 100%;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    font-size: 5vw;
     margin: 0;
   }
 
-  .contact-header {
-    margin: 2em;
-  }
-
-  .contact #co-text {
-    font-size: 1.6rem;
-    padding: 0;
+  #welcome-section h2 {
+    font-size: 3vw;
     margin: 0;
   }
 
   .contact-content {
+    width: 100vw;
     height: 100%;
-    padding: 0 20px 20px;
-  }
-
-  .contact-form {
-    padding: 0;
-    height: 100%;
-  }
-
-  form {
-    margin: 0;
-  }
-
-  textarea {
-    height: 200px;
-  }
-
-  #form-btn {
-    margin: 0;
-    padding: 0;
-  }
-
-  .contact-info {
-    height: 100vh;
-  }
-
-  .contact-links {
-    display: flex;
     flex-direction: column;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (min-width: 280px) {
+  #welcome-section h1,
+  h2 {
+    font-size: 5vw;
+    margin: 0;
+  }
+
+  #welcome-section h2 {
+    font-size: 4vw;
+    margin: 0;
+  }
+}
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px) {
   #navbar {
     position: unset;
     width: 100vw;
@@ -551,20 +443,23 @@ textarea,
     height: 100vh;
     padding: 0;
     margin: 0;
+  }
+
+  #navbar .menu li {
+    align-items: center;
   }
 
   #welcome-section h1,
   h2 {
     font-size: 1.2rem;
     margin: 0;
-    width: 0;
   }
 
   .typewriter-container {
     display: flex;
     flex-flow: column wrap;
     width: 100%;
-    max-width: 80%;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
   }
@@ -603,9 +498,11 @@ textarea,
   .contact-content {
     width: 100vw;
     height: 100%;
+    flex-direction: column;
   }
 
-  .contact-form {
+  .contact-form,
+  .contact-info {
     padding: 0;
     height: 100vh;
   }
@@ -621,13 +518,131 @@ textarea,
     padding: 0;
   }
 
-  .contact-info {
-    padding: 0;
-    height: 100vh;
-  }
-
   .contact-links {
     display: flex;
+  }
+}
+
+/* Smartphones (portrait) ---------- */
+@media screen and (max-width: 320px) {
+}
+
+/* Smartphones (landscape) ---------- */
+@media screen and (min-width: 321px) and {
+}
+
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* styles */
+}
+
+/* Tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 481px) and (max-width: 641px) {
+  /* styles */
+
+  .contact-content {
+    height: 80%;
+    width: 90vw;
     flex-direction: column;
   }
+
+  .contact-form {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+  #welcome-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .project-tile {
+    width: 50%;
+  }
+
+  #projects img {
+    transition: all 1s;
+    height: auto;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    margin: 0;
+  }
+
+  .contact-header {
+    margin: 2em;
+  }
+
+  .contact #co-text {
+    font-size: 1.6rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-content {
+    height: 80%;
+    width: 80vw;
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 0;
+    height: 100%;
+  }
+
+  #form-title {
+    margin: 3rem auto;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  #form-btn {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .form-field {
+    width: 100%;
+  }
+
+  #form-btn {
+    width: 100%;
+  }
+
+  .contact-header {
+    margin: 7rem 7rem 3rem 7rem;
+  }
+
+  .contact-info {
+    padding: 5rem;
+  }
+
+  #co-title {
+    font-size: 1rem;
+  }
+
+  #co-text {
+    font-size: 2.5rem;
+  }
+}
+/* Tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px) {
+  /* styles */
+}
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px) {
+  /* styles */
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px) {
+  /* styles */
 }
