@@ -484,6 +484,10 @@ textarea,
     }
   }
 
+  #projects h1 {
+    padding: 0;
+  }
+
   .project-tile {
     width: 100%;
   }
@@ -515,12 +519,16 @@ textarea,
   .contact-form,
   .contact-info {
     padding: 0;
-    height: 100vh;
+    height: auto;
   }
 
   form {
     margin: 0;
     width: 100%;
+  }
+
+  #form-title {
+    padding: 20px 0;
   }
 
   #form-btn {
@@ -549,6 +557,34 @@ textarea,
     width: 100vw;
     justify-content: space-evenly;
     text-align: center;
+  }
+
+  .contact-content {
+    height: 80%;
+    width: 80vw;
+    flex-direction: column;
+    padding: 0;
+  }
+  .contact-header {
+    margin: 0;
+    padding: 0 6vw;
+  }
+  .contact-form {
+    padding: 0;
+  }
+
+  #form-btn {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  #form-btn {
+    width: 100%;
   }
 }
 
