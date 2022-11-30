@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,40 +16,58 @@ body {
   width: 100vw;
   height: 100%;
   text-align: center;
+  font-size: 1.2em;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  z-index: 23;
-}
-
-li {
-  list-style: none;
-}
 /*========================================================================
-                                NAVBAR
+                               HAMBURGER MENU
  ==========================================================================
-                      */
-#navbar {
+                                  */
+.navigation__button,
+.navigation__background {
+  display: none;
+}
+
+.navigation__nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   box-shadow: 0 8px 6px -6px black;
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
+  width: 100vw;
+  height: 68px;
+  z-index: 1500;
 }
 
-#navbar .menu {
+.navigation__list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 50%;
+  margin: 0;
+  padding: 0;
+}
+.navigation__list li {
+  list-style-type: none;
+}
+
+.navigation__list li a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.navigation__list li a:hover {
+  cursor: pointer;
+  color: #f94206;
+}
+
+.navigation__checkbox {
+  display: none;
 }
 
 /*========================================================================
@@ -155,14 +179,14 @@ li {
   text-align: center;
   margin: 0;
   padding: 10px 50px;
-  font-weight: 800;
+  font-weight: 700;
+  word-wrap: break-word;
 }
 
 #about img {
   height: 200px;
   border-radius: 50%;
-  padding-bottom: 50px;
-  box-shadow: #ccc;
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
 }
 
 /*
@@ -396,68 +420,292 @@ textarea,
                             MEDIA QUERIES
  ==========================================================================
                                       */
+/* Tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px) {
+  /* styles */
+}
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px) {
+  /* styles */
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px) {
+  /* styles */
+}
+@media screen and (min-width: 768px) and (max-width: 870px) {
+  .contact-content {
+    width: 100vw;
+  }
+}
 
-/*Smart phones with extra small screens*/
-@media screen and (max-width: 280px) {
+@media screen and (min-width: 640px) {
+  #navbar .menu {
+    position: unset;
+    width: 100vw;
+    justify-content: space-evenly;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  #form-btn {
+    width: 100%;
+  }
+
+  .contact-header {
+    margin: 7rem 7rem 3rem 7rem;
+  }
+
+  .contact-info {
+    padding: 5rem;
+  }
+
+  #co-title {
+    font-size: 1rem;
+  }
+
+  #co-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
   #welcome-section h1 {
-    font-size: 5vw;
+    font-size: 1.6rem;
+  }
+
+  .project-tile {
+    width: 50%;
+  }
+
+  #projects img {
+    transition: all 1s;
+    height: auto;
+    width: 100%;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     margin: 0;
   }
 
-  #welcome-section h2 {
-    font-size: 3vw;
+  .contact-header {
+    margin: 2em;
+  }
+
+  .contact #co-text {
+    font-size: 1.6rem;
+    padding: 0;
     margin: 0;
   }
 
   .contact-content {
-    width: 100vw;
-    height: 100%;
+    height: 80%;
+    width: 80vw;
     flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 0;
+    height: 100%;
+  }
+
+  #form-title {
+    margin: 3rem auto;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  #form-btn {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 
-@media screen and (min-width: 280px) {
-  #welcome-section h1,
-  h2 {
-    font-size: 5vw;
-    margin: 0;
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  #navbar .menu {
+    position: unset;
+    width: 100vw;
+    justify-content: space-evenly;
+    text-align: center;
   }
 
-  #welcome-section h2 {
-    font-size: 4vw;
+  .contact-content {
+    height: 80%;
+    width: 80vw;
+    flex-direction: column;
+    padding: 0;
+  }
+  .contact-header {
     margin: 0;
+    padding: 0 6vw;
+  }
+  .contact-form {
+    padding: 0;
   }
 
-  #co-text {
-    font-size: 1.5rem;
+  #form-btn {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  #form-btn {
+    width: 100%;
   }
 }
 
 /* Smartphones (portrait and landscape) ---------- */
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  #navbar {
-    position: unset;
-    width: 100vw;
+@media screen and (min-width: 280px) and (max-width: 480px) {
+  .navigation__button,
+  .navigation__background {
+    display: block;
   }
 
-  #navbar .menu {
+  .navigation {
+    position: relative;
+  }
+  .navigation__checkbox {
+    display: none;
+  }
+
+  .navigation__button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .navigation__background {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      0deg,
+      rgb(249, 66, 6),
+      rgb(250, 134, 22),
+      rgb(251, 202, 37)
+    );
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  .navigation__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+  }
+
+  .navigation__list {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIALRCevgj5EHWbbVDxjXJbQ2_yvntG62-g&usqp=CAU");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    z-index: 1501;
   }
 
-  #navbar .menu li {
-    align-items: center;
+  .navigation__link {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+
+  .navigation__link:hover {
+    color: #a275f7;
+    transform: translateX(10px);
+  }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(1.6);
+    transform: scale(30);
+  }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+  }
+  .navigation__icon {
+    position: relative;
+    margin-top: 35px;
+  }
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+    width: 40px;
+    height: 3px;
+    background: #f94206;
+    display: inline-block;
+  }
+  .navigation__icon::before,
+  .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+  .navigation__icon::before {
+    top: -10px;
+  }
+  .navigation__icon::after {
+    top: 10px;
+  }
+  .navigation__button:hover .navigation__icon::before {
+    top: -12px;
+  }
+  .navigation__button:hover .navigation__icon::after {
+    top: 12px;
+  }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background: transparent;
+  }
+  .navigation__checkbox:checked
+    + .navigation__button
+    .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
   }
 
   #welcome-section h1,
@@ -484,8 +732,18 @@ textarea,
     }
   }
 
+  #about p {
+    padding: 10px 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
   #projects h1 {
-    padding: 0;
+    padding: 20px;
+  }
+
+  #projects p {
+    padding: 0 20px 30px 20px;
   }
 
   .project-tile {
@@ -551,147 +809,39 @@ textarea,
     padding: 0;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  #navbar .menu {
-    position: unset;
-    width: 100vw;
-    justify-content: space-evenly;
-    text-align: center;
-  }
 
-  .contact-content {
-    height: 80%;
-    width: 80vw;
-    flex-direction: column;
-    padding: 0;
-  }
-  .contact-header {
-    margin: 0;
-    padding: 0 6vw;
-  }
-  .contact-form {
-    padding: 0;
-  }
-
-  #form-btn {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .form-field {
-    width: 100%;
-  }
-
-  #form-btn {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 640px) and (max-width: 768px) {
+/*Smart phones with extra small screens*/
+@media screen and (max-width: 280px) {
   #welcome-section h1 {
-    font-size: 1.6rem;
-  }
-
-  .project-tile {
-    width: 50%;
-  }
-
-  #projects img {
-    transition: all 1s;
-    height: auto;
-    width: 100%;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    font-size: 5vw;
     margin: 0;
   }
 
-  .contact-header {
-    margin: 2em;
-  }
-
-  .contact #co-text {
-    font-size: 1.6rem;
-    padding: 0;
+  #welcome-section h2 {
+    font-size: 3vw;
     margin: 0;
   }
 
   .contact-content {
-    height: 80%;
-    width: 80vw;
+    width: 100vw;
+    height: 100%;
     flex-direction: column;
   }
+}
 
-  .contact-form,
-  .contact-info {
-    padding: 0;
-    height: 100%;
-  }
-
-  #form-title {
-    margin: 3rem auto;
-  }
-
-  form {
+@media screen and (min-width: 280px) {
+  #welcome-section h1,
+  h2 {
+    font-size: 5vw;
     margin: 0;
   }
 
-  textarea {
-    height: 200px;
-  }
-
-  #form-btn {
+  #welcome-section h2 {
+    font-size: 4vw;
     margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 870px) {
-  .contact-content {
-    width: 100vw;
-  }
-}
-
-@media screen and (min-width: 640px) {
-  #navbar .menu {
-    position: unset;
-    width: 100vw;
-    justify-content: space-evenly;
-  }
-
-  .form-field {
-    width: 100%;
-  }
-
-  #form-btn {
-    width: 100%;
-  }
-
-  .contact-header {
-    margin: 7rem 7rem 3rem 7rem;
-  }
-
-  .contact-info {
-    padding: 5rem;
-  }
-
-  #co-title {
-    font-size: 1rem;
   }
 
   #co-text {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
-}
-/* Tablets, iPads (landscape) ---------- */
-@media screen and (min-width: 1024px) {
-  /* styles */
-}
-/* Desktops and laptops ---------- */
-@media screen and (min-width: 1224px) {
-  /* styles */
-}
-/* Large screens ---------- */
-@media screen and (min-width: 1824px) {
-  /* styles */
 }
